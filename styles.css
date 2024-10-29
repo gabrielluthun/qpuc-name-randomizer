@@ -1,15 +1,50 @@
-#test {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 15px 32px;
+/* CSS Général */
+body {
+    font-family: Arial;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
+    color: white;
+}
+
+/* Header */
+.header {
+    background-color: #1B1A47;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+
+    font-size: 36px;
+    text-align: left;
+    font-size: 21px;
+    font-weight: 200;
+    margin: 0;
+    padding: 0;
+}
+
+.form, .buttons {
+    margin: 20px 0;
+}
+
+/* Container */
+
+
+
+/* Formulaire */
+#name {
+    padding: 10px;
     font-size: 16px;
-    margin: 4px 2px;
+}
+#names {
+    list-style-type: none;
+    padding: 0;
+}
+#names li {
+    font-size: 18px;
+    margin: 5px 0;
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
     cursor: pointer;
-    box-shadow: 0 1px #999;
-    transition-duration: 0.4s;
-    border-radius: 12px;
 }
