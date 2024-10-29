@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>QPUC Name Randomizer</title>
@@ -7,13 +8,26 @@
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
 </head>
+
 <body>
-    <h1>Hello World!</h1>
-    <p>
-        We are using Node.js <span id="node-version"></span>,
-        Chromium <span id="chrome-version"></span>,
-        and Electron <span id="electron-version"></span>.
-    </p>
-    <button id="test">Test</button>
+    <header class="header">
+        <h1>QPUC - Tirages au sort</h1>
+    </header>
+    <div class="container">
+        <div class="form">
+            <textarea name="names" id="names" placeholder="Entrez un prénom, un nom par ligne" cols="30" rows="10"></textarea>
+            <br>
+            <button onclick="addName()">Add</button>
+        </div>
+        <div class="buttons">
+            <button onclick="randomize()">Randomize</button>
+            <button onclick="reset()">Reset</button>
+        </div>
+    </div>
+    
+    <div class="names">
+        <ul id="names"></ul>
+    </div>
 </body>
+
 </html>
