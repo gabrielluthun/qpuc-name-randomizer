@@ -6,14 +6,12 @@ body {
     margin: 0;
     padding: 0;
 }
-
 /* Conteneur principal */
 .container {
     max-width: 800px;
     margin: auto;
     padding: 20px;
 }
-
 /* En-tête de la page */
 header {
     background-color: #16213e;
@@ -21,27 +19,29 @@ header {
     text-align: center;
     border-bottom: 2px solid #0f3460;
 }
-
 /* Contenu principal */
 .content {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
 }
-
 /* Paramètres du jeu */
 .game-parameters {
     width: 60%;
     background-color: #0f3460;
     padding: 20px;
     border-right: 1px solid white;
+    font-size: 2;
 }
 
+textarea {
+   font-size: 17px;
+}
 textarea::placeholder {
     color: white;
     font-style: italic;
+    font-size: 14px;
 }
-
 #btn-tirage-sort {
     background-color: #00a8e1;
     color: white;
@@ -50,7 +50,14 @@ textarea::placeholder {
     border-radius: 5px;
     cursor: pointer;
 }
-
+.reset {
+    background-color: #e94560c5;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 /* Zone de tirage */
 .draw-area {
     width: 100%;
@@ -59,26 +66,47 @@ textarea::placeholder {
     margin: 20px 0;
     border-radius: 8px;
 }
-
 /* Options supplémentaires */
 .additional-options {
     margin-top: 20px;
     border-top: 1px solid white;
     font-style: italic;
 }
-
 .additional-options label {
     display: block;
     margin-bottom: 10px;
 }
-
 /* Résultats du tirage */
 .draw-results {
     width: 45%;
     background-color: #0f3460;
     padding: 20px;
 }
-
 .draw-results ol {
     padding-left: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid white;
+}
+/* Comptage des tirages */
+.number-game-of-players {
+    margin-top: 15px;
+}
+.number-game-of-players h3 {
+    margin-bottom: 10px;
+}
+.number-game-of-players ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.number-game-of-players li {
+    margin-bottom: 5px;
+}
+
+.reset-nb-of-draws {
+    background-color: #e94560c5;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
