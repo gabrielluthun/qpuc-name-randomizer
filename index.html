@@ -1,33 +1,38 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>QPUC Name Randomizer</title>
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <title>QPUC - Tirages au sort</title>
 </head>
-
 <body>
-    <header class="header">
-        <h1>QPUC - Tirages au sort</h1>
-    </header>
     <div class="container">
-        <div class="form">
-            <textarea name="names" id="names" placeholder="Entrez un prénom, un nom par ligne" cols="30" rows="10"></textarea>
-            <br>
-            <button onclick="addName()">Add</button>
+        <header>
+            <h1>QPUC - Tirages au sort</h1>
+        </header>
+        <div class="content">
+            <div class="game-parameters">
+                <h2>Paramètres de jeu</h2>
+                <textarea name="name-players" class="draw-area" cols="30" rows="10" placeholder="Insérez les noms des joueurs ici (1 par ligne)"></textarea>
+                <button id="btn-tirage-sort">Tirer au sort</button>
+                <div class="additional-options">
+                    <h3>Options supplémentaires</h3>
+                    <label for="remaining-players">Combien de joueurs restants doivent être tirés au sort ?</label>
+                    <input type="number" id="remaining-players" value="1" min="1" max="5">
+                </div>
+            </div>
+            <div class="draw-results">
+                <h2>Résultats du tirage au sort</h2>
+                <ol>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ol>
+            </div>
         </div>
-        <div class="buttons">
-            <button onclick="randomize()">Randomize</button>
-            <button onclick="reset()">Reset</button>
-        </div>
-    </div>
-    
-    <div class="names">
-        <ul id="names"></ul>
     </div>
 </body>
-
 </html>
