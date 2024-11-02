@@ -34,12 +34,21 @@ header {
     width: 60%;
     background-color: #0f3460;
     padding: 20px;
-    border-radius: 8px;
+    border-right: 1px solid white;
 }
 
 textarea::placeholder {
     color: white;
     font-style: italic;
+}
+
+#btn-tirage-sort {
+    background-color: #00a8e1;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 /* Zone de tirage */
@@ -54,6 +63,8 @@ textarea::placeholder {
 /* Options supplémentaires */
 .additional-options {
     margin-top: 20px;
+    border-top: 1px solid white;
+    font-style: italic;
 }
 
 .additional-options label {
@@ -63,10 +74,9 @@ textarea::placeholder {
 
 /* Résultats du tirage */
 .draw-results {
-    width: 35%;
+    width: 45%;
     background-color: #0f3460;
     padding: 20px;
-    border-radius: 8px;
 }
 
 .draw-results ol {
