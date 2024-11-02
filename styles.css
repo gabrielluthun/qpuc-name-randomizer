@@ -1,50 +1,74 @@
-/* CSS Général */
+/* Style général du corps de la page */
 body {
-    font-family: Arial;
-    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a2e;
     color: white;
-}
-
-/* Header */
-.header {
-    background-color: #1B1A47;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-.header h1 {
-
-    font-size: 36px;
-    text-align: left;
-    font-size: 21px;
-    font-weight: 200;
     margin: 0;
     padding: 0;
 }
 
-.form, .buttons {
-    margin: 20px 0;
+/* Conteneur principal */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
 }
 
-/* Container */
-
-
-
-/* Formulaire */
-#name {
+/* En-tête de la page */
+header {
+    background-color: #16213e;
     padding: 10px;
-    font-size: 16px;
+    text-align: center;
+    border-bottom: 2px solid #0f3460;
 }
-#names {
-    list-style-type: none;
-    padding: 0;
+
+/* Contenu principal */
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
 }
-#names li {
-    font-size: 18px;
-    margin: 5px 0;
+
+/* Paramètres du jeu */
+.game-parameters {
+    width: 60%;
+    background-color: #0f3460;
+    padding: 20px;
+    border-radius: 8px;
 }
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
+
+textarea::placeholder {
+    color: white;
+    font-style: italic;
+}
+
+/* Zone de tirage */
+.draw-area {
+    width: 100%;
+    height: 200px;
+    background-color: #00a8e1;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+/* Options supplémentaires */
+.additional-options {
+    margin-top: 20px;
+}
+
+.additional-options label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Résultats du tirage */
+.draw-results {
+    width: 35%;
+    background-color: #0f3460;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.draw-results ol {
+    padding-left: 20px;
 }
