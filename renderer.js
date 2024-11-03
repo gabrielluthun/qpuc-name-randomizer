@@ -29,6 +29,12 @@ function reset() {
     document.querySelector('.draw-results ol').innerHTML = '';
 }
 
+function resetDrawCounts() {   
+    reset();
+    const ul = document.querySelector('.number-game-of-players ul');
+    ul.innerHTML = '';
+}
+
 // Fonction pour incrémenter le nombre de tirages
 function incrementNumberOfDraws(name) {
     // Mettre à jour le nombre de tirages pour le nom sélectionné
@@ -103,3 +109,5 @@ function randomize() {
 document.getElementById('btn-tirage-sort').addEventListener('click', randomize);
 // Lors du clic sur le bouton de remise à zéro, effacer les noms
 document.querySelector('.reset').addEventListener('click', reset);
+
+document.querySelector('.remise-a-zero-tirages').addEventListener('click', resetDrawCounts);
