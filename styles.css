@@ -49,6 +49,7 @@ textarea::placeholder {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-right: 15px;
 }
 .reset {
     background-color: #e94560c5;
@@ -103,6 +104,15 @@ textarea::placeholder {
 }
 
 .reset-nb-of-draws {
+    background-color: #e94560c5;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.remise-a-zero-tirages {
     background-color: #e94560c5;
     color: white;
     padding: 10px 20px;
