@@ -123,13 +123,3 @@ textarea::placeholder {
     border-radius: 5px;
     cursor: pointer;
 }
-
-#delete-player {
-    background-color: #e94560c5;
-    color: white;
-    padding: 10px 20px;
-    margin-top: 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}

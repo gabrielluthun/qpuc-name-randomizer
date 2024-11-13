@@ -146,8 +146,3 @@ document.getElementById('validerTirage').addEventListener('click', () => {
 });
 
 document.querySelector('#reset-all').addEventListener('click', resetDrawCounts);
-
-document.getElementById('delete-player').addEventListener('click', () => {
-    const name = prompt('Veuillez entrer le prénom du joueur à supprimer :');
-    deletePlayer(name);
-});
