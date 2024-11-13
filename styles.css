@@ -51,14 +51,7 @@ textarea::placeholder {
     cursor: pointer;
     margin-right: 15px;
 }
-.reset {
-    background-color: #e94560c5;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+
 /* Zone de tirage */
 .draw-area {
     width: 100%;
@@ -86,10 +79,10 @@ textarea::placeholder {
 .draw-results ol {
     padding-left: 20px;
     padding-bottom: 15px;
-    border-bottom: 1px solid white;
 }
 /* Comptage des tirages */
 .number-game-of-players {
+    border-top: 1px solid white;
     margin-top: 15px;
 }
 .number-game-of-players h3 {
@@ -103,7 +96,7 @@ textarea::placeholder {
     margin-bottom: 5px;
 }
 
-.reset-nb-of-draws {
+.remise-a-zero-tirages {
     background-color: #e94560c5;
     color: white;
     padding: 10px 20px;
@@ -112,10 +105,30 @@ textarea::placeholder {
     cursor: pointer;
 }
 
-.remise-a-zero-tirages {
+#validerTirage {
+    background-color: #00a8e1;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+#reset-all {
     background-color: #e94560c5;
     color: white;
     padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#delete-player {
+    background-color: #e94560c5;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
