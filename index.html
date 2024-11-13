@@ -16,7 +16,6 @@
                 <h2>Paramètres de jeu</h2>
                 <textarea name="name-players" class="draw-area" cols="20" rows="10" placeholder="Insérez les noms des joueurs ici (1 par ligne)"></textarea>
                 <button id="btn-tirage-sort">Tirer au sort</button>
-                <button class="reset">Rénitialiser les noms tirés</button>
                 <div class="additional-options">
                     <h3>Options supplémentaires</h3>
                     <label for="remaining-players">Combien de joueurs restants doivent être tirés au sort ?</label>
@@ -31,7 +30,9 @@
                     <li></li>
                     <li></li>
                     <li></li>
+                    <br>
                 </ol>
+                <button id="validerTirage">Valider le tirage</button>
                 <div class="number-game-of-players">
                     <h3>Nombre de tirages total par joueur :</h3>
                     <ul>
@@ -41,7 +42,8 @@
                         <li></li>
                         <li></li> 
                     </ul>
-                    <button class="remise-a-zero-tirages">Tout remettre à zéro</button>
+                    <button id="reset-all">Tout remettre à zéro</button>
+                    <button id="delete-player">Supprimer un joueur de la liste</button>
                 </div>
             </div>
         </div>
