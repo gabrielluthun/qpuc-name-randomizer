@@ -22,11 +22,11 @@ function addName(name) {
     }
 }
 
-// Fonction pour réinitialiser la liste des noms et l'interface utilisateur
 function reset() {
-    names.length = 0;
+    names = [];
     drawCounts = {};
-    document.querySelector('.draw-results ol').innerHTML = '';
+    const ol = document.querySelector('.draw-results ol');
+    ol.innerHTML = '';
 }
 
 function resetDrawCounts() {   
@@ -88,7 +88,6 @@ function randomize() {
             const selectedName = nameList[randomIndex];
             if (!selectedNames.has(selectedName)) {
                 selectedNames.add(selectedName);
-                incrementNumberOfDraws(selectedName);
             }
         }
 
@@ -105,9 +104,50 @@ function randomize() {
     }
 }
 
+function deletePlayer(name) {
+    if (name && names.includes(name)) {
+        const confirmation = confirm(`Voulez-vous vraiment supprimer ${name} de la liste ?`);
+        if (confirmation) {
+            // Supprimer le nom de la liste des noms
+            names = names.filter(n => n !== name);
+
+            // Supprimer le nom de l'affichage des résultats du tirage au sort
+            const ol = document.querySelector('.draw-results ol');
+            const liToRemove = Array.from(ol.children).find(li => li.textContent === name);
+            if (liToRemove) {
+                ol.removeChild(liToRemove);
+            }
+
+            // Supprimer le nom de l'affichage du nombre de tirages par joueur
+            const ul = document.querySelector('.number-game-of-players ul');
+            const liCountToRemove = document.getElementById(`count-${name}`);
+            if (liCountToRemove) {
+                ul.removeChild(liCountToRemove);
+            }
+
+            // Supprimer le nom du compteur de tirages
+            delete drawCounts[name];
+        }
+    } else {
+        alert('Le nom indiqué n\'est pas présent dans la liste.');
+    }
+}
+
+
 // Ajout d'un écouteur d'événement au bouton "Tirer au sort"
 document.getElementById('btn-tirage-sort').addEventListener('click', randomize);
-// Lors du clic sur le bouton de remise à zéro, effacer les noms
-document.querySelector('.reset').addEventListener('click', reset);
 
-document.querySelector('.remise-a-zero-tirages').addEventListener('click', resetDrawCounts);
+document.getElementById('validerTirage').addEventListener('click', () => {
+    const selectedNames = document.querySelectorAll('.draw-results ol li');
+    selectedNames.forEach(li => {
+        const name = li.textContent;
+        incrementNumberOfDraws(name);
+    });
+});
+
+document.querySelector('#reset-all').addEventListener('click', resetDrawCounts);
+
+document.getElementById('delete-player').addEventListener('click', () => {
+    const name = prompt('Veuillez entrer le prénom du joueur à supprimer :');
+    deletePlayer(name);
+});
